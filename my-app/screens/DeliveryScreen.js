@@ -29,7 +29,8 @@ export default function DeliveryScreen() {
           longitude: restaurant.lng,
           latitudeDelta: 0.01,
           longitudeDelta: 0.01,
-        }}>
+        }}
+      >
         <Marker
           coordinate={{
             latitude: restaurant.lat,
@@ -61,14 +62,16 @@ export default function DeliveryScreen() {
         </View>
         <View
           className="flex-row justify-between items-center p-2 mx-2 my-5 rounded-full"
-          style={{ backgroundColor: colors.bgColor }}>
+          style={{ backgroundColor: colors.bgColor }}
+        >
           <View
             style={{ backgroundColor: 'rgba(255,255,255,0.4)' }}
-            className="rounded-full p-1">
-            <Image
+            className="rounded-full p-1"
+          >
+            {/* <Image
               className="w-16 h-16 rounded-full"
               source={require('../assets/images/deliveryGuy.png')}
-            />
+            /> */}
           </View>
           <View className="flex-1 ml-3">
             <Text className="text-lg text-white font-bold">AbdulSami</Text>
@@ -84,7 +87,8 @@ export default function DeliveryScreen() {
             </TouchableOpacity>
             <TouchableOpacity
               onPress={cancelOrder}
-              className="bg-white p-2 rounded-full">
+              className="bg-white p-2 rounded-full"
+            >
               <Icon.X stroke="red" strokeWidth={5} />
             </TouchableOpacity>
           </View>
